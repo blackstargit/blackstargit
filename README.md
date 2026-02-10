@@ -141,8 +141,8 @@ _A journey through code: from initial experiments to architectural templates._
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=blackstargit&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=blackstargit&layout=compact&theme=tokyonight" alt="Top Languages" />
+  <img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api?username=blackstargit&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=blackstargit&layout=compact&theme=tokyonight" alt="Top Languages" />
 </p>
 
 ---
