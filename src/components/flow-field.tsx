@@ -79,8 +79,8 @@ export default function FlowField({
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const target = Math.min(
-        Math.floor((width * height) / 7000),
-        760,
+        Math.floor((width * height) / 9500),
+        560,
       );
       particles = new Array(target).fill(0).map(() => {
         const p: Particle = {
@@ -107,11 +107,11 @@ export default function FlowField({
       // Fade previous frame slightly -> trails become flowing lines.
       // Lower alpha = trails persist longer and read brighter.
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "rgba(7, 11, 22, 0.055)";
+      ctx.fillStyle = "rgba(7, 11, 22, 0.035)";
       ctx.fillRect(0, 0, width, height);
 
       ctx.globalCompositeOperation = "lighter";
-      ctx.lineWidth = 1.35;
+      ctx.lineCap = "round";
 
       for (const p of particles) {
         let angle = fieldAngle(p.x, p.y, t);
@@ -161,8 +161,22 @@ export default function FlowField({
           b = lerp(b, AMBER[2], nearPointer);
         }
 
-        const alpha = (0.2 + fade * 0.45 + nearPointer * 0.4).toFixed(3);
-        ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${b | 0}, ${alpha})`;
+        const ri = r | 0;
+        const gi = g | 0;
+        const bi = b | 0;
+        const core = 0.45 + fade * 0.5 + nearPointer * 0.4;
+
+        // Soft wide halo underneath -> the glow that makes each line read.
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = `rgba(${ri}, ${gi}, ${bi}, ${(core * 0.16).toFixed(3)})`;
+        ctx.beginPath();
+        ctx.moveTo(p.px, p.py);
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+
+        // Bright thin core on top.
+        ctx.lineWidth = 1.8;
+        ctx.strokeStyle = `rgba(${ri}, ${gi}, ${bi}, ${core.toFixed(3)})`;
         ctx.beginPath();
         ctx.moveTo(p.px, p.py);
         ctx.lineTo(p.x, p.y);
