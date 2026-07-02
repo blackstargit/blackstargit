@@ -12,8 +12,8 @@ type Particle = {
   hue: number; // 0 -> cyan, 1 -> violet
 };
 
-const CYAN = [34, 211, 238];
-const VIOLET = [124, 92, 252];
+const CYAN = [45, 224, 250];
+const VIOLET = [163, 122, 255];
 const AMBER = [251, 191, 36];
 
 function lerp(a: number, b: number, t: number) {
@@ -79,8 +79,8 @@ export default function FlowField({
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const target = Math.min(
-        Math.floor((width * height) / 8500),
-        620,
+        Math.floor((width * height) / 7000),
+        760,
       );
       particles = new Array(target).fill(0).map(() => {
         const p: Particle = {
@@ -105,12 +105,13 @@ export default function FlowField({
       t += 0.0016;
 
       // Fade previous frame slightly -> trails become flowing lines.
+      // Lower alpha = trails persist longer and read brighter.
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "rgba(7, 11, 22, 0.09)";
+      ctx.fillStyle = "rgba(7, 11, 22, 0.055)";
       ctx.fillRect(0, 0, width, height);
 
       ctx.globalCompositeOperation = "lighter";
-      ctx.lineWidth = 1.15;
+      ctx.lineWidth = 1.35;
 
       for (const p of particles) {
         let angle = fieldAngle(p.x, p.y, t);
@@ -160,7 +161,7 @@ export default function FlowField({
           b = lerp(b, AMBER[2], nearPointer);
         }
 
-        const alpha = (0.12 + fade * 0.32 + nearPointer * 0.35).toFixed(3);
+        const alpha = (0.2 + fade * 0.45 + nearPointer * 0.4).toFixed(3);
         ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${b | 0}, ${alpha})`;
         ctx.beginPath();
         ctx.moveTo(p.px, p.py);
@@ -194,8 +195,8 @@ export default function FlowField({
           const r = lerp(CYAN[0], VIOLET[0], p.hue);
           const g = lerp(CYAN[1], VIOLET[1], p.hue);
           const b = lerp(CYAN[2], VIOLET[2], p.hue);
-          ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${b | 0}, 0.16)`;
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${b | 0}, 0.26)`;
+          ctx.lineWidth = 1.3;
           ctx.beginPath();
           ctx.moveTo(p.px, p.py);
           ctx.lineTo(p.x, p.y);

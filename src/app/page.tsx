@@ -15,7 +15,7 @@ export default function Home() {
       <FlowField className="fixed inset-0 -z-20 h-full w-full" />
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-ink/10 via-transparent to-ink/40"
+        className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-ink/5 via-transparent to-ink/20"
       />
 
       <SiteNav />
