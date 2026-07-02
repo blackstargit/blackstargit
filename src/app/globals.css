@@ -60,7 +60,10 @@ html {
 }
 
 body {
-  background: var(--ink);
+  /* No background here: an opaque body background paints over fixed children
+     with a negative z-index (like the flow-field canvas). The ink base lives
+     on <html> instead so the canvas stays visible behind the content. */
+  background: transparent;
   color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
