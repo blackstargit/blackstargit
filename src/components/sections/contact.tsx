@@ -13,7 +13,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative px-5 py-28 sm:px-8 md:py-40"
+      className="relative bg-ink-2/60 px-5 py-28 sm:px-8 md:py-40"
     >
       <div className="mx-auto max-w-6xl">
         <Reveal>

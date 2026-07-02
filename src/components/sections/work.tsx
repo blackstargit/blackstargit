@@ -100,7 +100,7 @@ export function Work() {
   return (
     <section
       id="work"
-      className="relative border-t border-line bg-ink-2/60 px-5 py-24 sm:px-8 md:py-32"
+      className="relative bg-ink-2/60 px-5 py-24 sm:px-8 md:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading

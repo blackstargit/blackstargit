@@ -4,7 +4,10 @@ import { Reveal } from "../reveal";
 
 export function MoreProjects() {
   return (
-    <section id="more" className="relative px-5 py-24 sm:px-8 md:py-32">
+    <section
+      id="more"
+      className="relative bg-ink-2/60 px-5 py-24 sm:px-8 md:py-32"
+    >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="the archive"

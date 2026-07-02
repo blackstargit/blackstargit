@@ -3,7 +3,10 @@ import { Reveal } from "../reveal";
 
 export function About() {
   return (
-    <section id="about" className="relative px-5 py-24 sm:px-8 md:py-32">
+    <section
+      id="about"
+      className="relative bg-ink-2/60 px-5 py-24 sm:px-8 md:py-32"
+    >
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
         <div>
           <Reveal>

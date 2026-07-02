@@ -10,7 +10,10 @@ const dot: Record<Accent, string> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="relative px-5 py-24 sm:px-8 md:py-32">
+    <section
+      id="skills"
+      className="relative bg-ink-2/60 px-5 py-24 sm:px-8 md:py-32"
+    >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="capabilities"
