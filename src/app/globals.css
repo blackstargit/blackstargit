@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * STREAMFIELD — design tokens
+ * cool electric flow on ink, warm amber for the human touch
+ * ------------------------------------------------------------------ */
+:root {
+  --ink: #070b16; /* base background */
+  --ink-2: #0a0f1e; /* subtle band */
+  --deep: #0f1626; /* elevated panels / cards */
+  --deep-2: #131c30; /* hover / raised */
+
+  --text: #e8edf7; /* primary text */
+  --muted: #8a94ad; /* secondary text */
+  --faint: #5a647e; /* tertiary / captions */
+
+  --cyan: #22d3ee;
+  --violet: #7c5cfc;
+  --amber: #fbbf24; /* warm interaction accent */
+
+  --line: rgba(232, 237, 247, 0.08);
+  --line-strong: rgba(232, 237, 247, 0.16);
+
+  --glow-cyan: rgba(34, 211, 238, 0.5);
+  --glow-violet: rgba(124, 92, 252, 0.5);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-deep: var(--deep);
+  --color-deep-2: var(--deep-2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-cyan: var(--cyan);
+  --color-violet: var(--violet);
+  --color-amber: var(--amber);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+/* Focus visibility — quality floor */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Utilities
+ * ------------------------------------------------------------------ */
+
+/* mono eyebrow — telemetry-style label */
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* the signature gradient text — used sparingly */
+.stream-text {
+  background: linear-gradient(
+    100deg,
+    var(--cyan) 0%,
+    var(--violet) 55%,
+    var(--cyan) 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: stream-shift 8s linear infinite;
+}
+
+@keyframes stream-shift {
+  to {
+    background-position: 220% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stream-text {
+    animation: none;
+    background-position: 0 center;
+  }
+}
+
+.hairline {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line-strong) 20%,
+    var(--line-strong) 80%,
+    transparent
+  );
+}
+
+.card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--deep);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition:
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    var(--deep-2);
+}
+
+/* reveal-on-scroll base (JS toggles .in) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
