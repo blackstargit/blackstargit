@@ -1,23 +1,22 @@
 export type Accent = "cyan" | "violet" | "amber";
 
 export const profile = {
-  name: "Muhammad Sadiq Raza",
-  shortName: "Sadiq Raza",
-  role: "AI Developer",
-  tagline: "Building intelligent systems.",
-  location: "Islamabad, Pakistan",
-  email: "msadiqraza18@gmail.com",
-  github: "https://github.com/blackstargit",
-  linkedin: "https://linkedin.com/in/msadiqraza",
-  // Other profiles — pending real handles from the owner (e.g. Hugging Face).
-  // huggingface: "",
-  intro:
-    "I build intelligent systems — machine-learning pipelines, autonomous AI agents, and the real-time infrastructure that feeds them. My work sits where AI meets cybersecurity, with a decade's worth of side-quests through full-stack web and blockchain along the way.",
-  about: [
-    "I'm an AI developer. Most of my day is spent teaching software to reason over messy, real-world signals — language, telemetry, network traffic — and to act on what it finds.",
-    "Right now I'm the Research Officer for AI at PAF Cyber Command, where my job is to make sure artificial intelligence is genuinely leveraged across the team's work, not bolted on. Before that I engineered real-time analytics systems at NASTP and shipped AI, blockchain, and web products at Alphabase.",
-    "I care about clean, modular, well-documented code, and about systems that hold up when they meet real data and real users.",
-  ],
+	name: "Muhammad Sadiq Raza",
+	shortName: "Sadiq Raza",
+	role: "AI Developer",
+	tagline: "Building intelligent systems.",
+	location: "Islamabad, Pakistan",
+	email: "blackst1rmail@gmail.com",
+	github: "https://github.com/blackstargit",
+	linkedin: "https://linkedin.com/in/msadiqraza",
+	huggingface: "https://huggingface.co/blackstarai",
+
+	intro: "I build intelligent systems — machine-learning pipelines, autonomous AI agents, and the real-time infrastructure that feeds them. My work sits where AI meets cybersecurity, with a decade's worth of side-quests through full-stack web and blockchain along the way.",
+	about: [
+		"I'm an AI developer. Most of my day is spent teaching software to reason over messy, real-world signals — language, telemetry, network traffic — and to act on what it finds.",
+		"Right now I'm the Research Officer for AI at PAF Cyber Command, where my job is to make sure artificial intelligence is genuinely leveraged across the team's work, not bolted on. Before that I engineered real-time analytics systems at NASTP and shipped AI, blockchain, and web products at Alphabase.",
+		"I care about clean, modular, well-documented code, and about systems that hold up when they meet real data and real users.",
+	],
 };
 
 export type SkillGroup = {
