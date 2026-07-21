@@ -8,15 +8,11 @@ import navLinksData from "@/data/nav-links.json";
 
 export type Accent = "cyan" | "violet" | "amber";
 
-export const profile = profileData;
-
 export type SkillGroup = {
   label: string;
   accent: Accent;
   items: string[];
 };
-
-export const skillGroups = skillGroupsData as SkillGroup[];
 
 export type Project = {
   slug: string;
@@ -34,34 +30,34 @@ export type Project = {
   highlights?: { title: string; body: string }[];
 };
 
-export const projects = projectsData as Project[];
+export type MoreProject = {
+	name: string;
+	blurb: string;
+	tags: string[];
+};
 
-export const featuredProjects = projects.filter((p) => p.featured);
-export const detailProjects = projects.filter((p) => p.hasDetail);
+export type Job = {
+	role: string;
+	org: string;
+	period: string;
+	location: string;
+	current?: boolean;
+	points: string[];
+};
 
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug);
 }
 
-export type MoreProject = {
-  name: string;
-  blurb: string;
-  tags: string[];
-};
+export const profile = profileData;
 
+export const projects = projectsData as Project[];
+
+export const featuredProjects = projects.filter((p) => p.featured);
+export const detailProjects = projects.filter((p) => p.hasDetail);
+
+export const skillGroups = skillGroupsData as SkillGroup[];
 export const moreProjects = moreProjectsData as MoreProject[];
-
-export type Job = {
-  role: string;
-  org: string;
-  period: string;
-  location: string;
-  current?: boolean;
-  points: string[];
-};
-
 export const experience = experienceData as Job[];
-
 export const education = educationData;
-
 export const navLinks = navLinksData;

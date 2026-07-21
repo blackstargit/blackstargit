@@ -12,12 +12,12 @@ export function About() {
           <Reveal>
             <p className="eyebrow flex items-center gap-2">
               <span className="text-amber">//</span>
-              background
+              {profile.aboutLabel}
             </p>
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-text sm:text-4xl">
-              I teach software to reason over the real world.
+              {profile.aboutHeading}
             </h2>
           </Reveal>
         </div>
@@ -31,9 +31,7 @@ export function About() {
           <Reveal delay={profile.about.length * 90}>
             <p className="pt-2 font-mono text-sm text-faint">
               <span className="text-cyan">const</span> philosophy ={" "}
-              <span className="text-amber">
-                &quot;clean, documented, modular&quot;
-              </span>
+              <span className="text-amber">&quot;{profile.philosophy}&quot;</span>
               ;
             </p>
           </Reveal>

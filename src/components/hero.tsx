@@ -9,9 +9,9 @@ export function Hero() {
         <Reveal>
           <p className="eyebrow flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="text-amber">~</span>
-            ai.developer
+            {profile.roleTag}
             <span className="text-faint">//</span>
-            paf cyber&nbsp;command
+            {profile.orgTag}
           </p>
         </Reveal>
 
@@ -55,8 +55,8 @@ export function Hero() {
               <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
               {profile.location}
             </span>
-            <span>AI · Machine Learning · Security</span>
-            <span className="hidden sm:inline">Available for collaboration</span>
+            <span>{profile.focusAreas.join(" · ")}</span>
+            <span className="hidden sm:inline">{profile.availability}</span>
           </div>
         </Reveal>
       </div>
