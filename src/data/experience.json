@@ -1,0 +1,54 @@
+[
+  {
+    "role": "Research Officer — AI in Cybersecurity",
+    "org": "PAF Cyber Command",
+    "period": "Oct 2025 — Present",
+    "location": "Islamabad, Pakistan",
+    "current": true,
+    "points": [
+      "The team's AI specialist — responsible for making sure AI is genuinely leveraged across every project, not bolted on.",
+      "Lead dedicated AI initiatives alongside embedding machine learning into existing cyber work."
+    ]
+  },
+  {
+    "role": "Intern — Real-Time Systems",
+    "org": "National Aerospace Science & Technology Park (NASTP)",
+    "period": "Jul 2025 — 2026",
+    "location": "Islamabad, Pakistan",
+    "points": [
+      "Engineered a high-throughput aerospace analytics database — benchmarked and tuned TimescaleDB to roughly 95% higher throughput than the alternatives.",
+      "Built a low-latency telemetry ingestion pipeline on ZeroMQ, validated at a sustained 100,000 messages per minute under stress.",
+      "Designed the time-series data model, partitioning, and retention strategy, plus a cross-language UI for working with aircraft statistics."
+    ]
+  },
+  {
+    "role": "Junior Developer",
+    "org": "Alphabase",
+    "period": "Jul 2024 — Jun 2025",
+    "location": "Islamabad, Pakistan",
+    "points": [
+      "Shipped 7+ production modules across AI, blockchain, and web — owning features from design through CI/CD.",
+      "Architected RAG retrieval pipelines and integrated LLM APIs, cutting average query latency by 40% through prompt optimization.",
+      "Built WebSocket mempool trackers for DeFi workflows and orchestrated multi-cloud automation with n8n, doubling internal throughput."
+    ]
+  },
+  {
+    "role": "Freelance Full-Stack Developer",
+    "org": "Fiverr",
+    "period": "Feb 2024 — Jun 2024",
+    "location": "Remote",
+    "points": [
+      "Delivered 20+ business and e-commerce sites with React/Next.js and custom WordPress, focused on performance and conversion.",
+      "Built NFT marketplace features — wallet integration, mint and listing flows, and smart-contract interaction pipelines."
+    ]
+  },
+  {
+    "role": "Web Developer",
+    "org": "Sigma Engineering Associates",
+    "period": "Jun 2023 — Oct 2023",
+    "location": "Taxila, Pakistan",
+    "points": [
+      "Built the company's first dashboard and established its online presence."
+    ]
+  }
+]

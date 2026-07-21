@@ -1,0 +1,58 @@
+[
+  {
+    "label": "AI / Machine Learning",
+    "accent": "cyan",
+    "items": [
+      "PyTorch",
+      "TensorFlow",
+      "NLP & Transformers",
+      "LLM agents (RAG, multi-agent)",
+      "Ollama / llama.cpp",
+      "Embeddings & clustering",
+      "Explainable AI",
+      "Computer vision & OCR"
+    ]
+  },
+  {
+    "label": "Cybersecurity",
+    "accent": "violet",
+    "items": [
+      "Offensive-security tooling",
+      "VAPT automation",
+      "OSINT analysis",
+      "Autonomous security agents"
+    ]
+  },
+  {
+    "label": "Web & Full-stack",
+    "accent": "amber",
+    "items": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js / FastAPI",
+      "Redux Toolkit & RTK Query",
+      "Tailwind / shadcn/ui"
+    ]
+  },
+  {
+    "label": "Data & Real-time",
+    "accent": "cyan",
+    "items": [
+      "PostgreSQL / TimescaleDB",
+      "ZeroMQ streaming",
+      "Supabase",
+      "Redis"
+    ]
+  },
+  {
+    "label": "Blockchain / Web3",
+    "accent": "violet",
+    "items": ["Solidity", "Ethereum", "Web3.js", "Mempool & DeFi tooling"]
+  },
+  {
+    "label": "Infrastructure",
+    "accent": "amber",
+    "items": ["Docker", "CI/CD — GitHub Actions", "Nginx", "n8n automation"]
+  }
+]

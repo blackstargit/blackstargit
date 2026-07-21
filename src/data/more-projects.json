@@ -1,0 +1,32 @@
+[
+  {
+    "name": "RAG Chatbot Platform",
+    "blurb": "A retrieval-augmented chatbot with its own backend and frontend, wired into a document knowledge base.",
+    "tags": ["RAG", "LLM"]
+  },
+  {
+    "name": "Health Plan Generator",
+    "blurb": "An AI healthcare-plan generator with a self-evaluation loop that critiques and improves its own output.",
+    "tags": ["AI", "Agents"]
+  },
+  {
+    "name": "Novel-to-EPUB Automator",
+    "blurb": "Resume-safe web scraping that compiles web novels into EPUBs and emails them when they're done. Dockerized end to end.",
+    "tags": ["Automation", "FastAPI"]
+  },
+  {
+    "name": "Zenith Reader",
+    "blurb": "A full-stack web-novel reader shipped across web and Android from a single codebase.",
+    "tags": ["Cross-platform", "Mobile"]
+  },
+  {
+    "name": "DeFi & Balancer Tooling",
+    "blurb": "Real-time mempool trackers and Balancer protocol experiments — arbitrage strategies and on-chain data parsing.",
+    "tags": ["Web3", "DeFi"]
+  },
+  {
+    "name": "Resource Dashboard",
+    "blurb": "GPU, CPU, and memory monitoring for the ML workstations behind the heavier AI projects.",
+    "tags": ["Infra", "Monitoring"]
+  }
+]

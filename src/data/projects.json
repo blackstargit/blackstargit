@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "cortex-strike",
+    "name": "Cortex Strike",
+    "descriptor": "Autonomous Offensive Security Co-Pilot & VAPT Agent",
+    "tags": ["AI Agents", "Cybersecurity", "LLM"],
+    "status": "In active development",
+    "accent": "violet",
+    "featured": true,
+    "hasDetail": true,
+    "stack": ["Python", "FastAPI", "React / TypeScript", "Local LLM", "PostgreSQL"],
+    "card": "An AI agent that plans and runs multi-step penetration tests, chaining a large library of offensive-security tools through a single conversation.",
+    "overview": [
+      "Cortex Strike turns penetration testing into a conversation. You describe a target; an AI agent plans the assessment, chooses the right tools from a large offensive-security library, runs them in sequence, and reasons over the results — recon feeding exploitation feeding follow-up, without a human wiring each step by hand.",
+      "It runs on a locally-hosted open-source model, so nothing about a target ever leaves the machine. Around the agent sits a full product: authentication, persistent chat history, per-user tool selection, and a live view of each tool as it executes."
+    ],
+    "highlights": [
+      {
+        "title": "Long tool-chains without losing the thread",
+        "body": "Multi-step assessments generate enormous tool output that quickly overwhelms a model's memory. Cortex Strike keeps full results in external storage and gives the agent an on-demand way to look them up, so it can run long chains and still quote exact findings accurately instead of hallucinating them."
+      },
+      {
+        "title": "Built on a hardened foundation",
+        "body": "Rather than start from zero, it stands on a substantially re-architected and hardened open-source security toolkit — refactored for modularity, stability, and safe deployment."
+      },
+      {
+        "title": "A real product, not a script",
+        "body": "Auth, saved conversations, per-user tool personalization, and streamed live execution progress make it something a security team could actually sit down and use."
+      }
+    ]
+  },
+  {
+    "slug": "echo-shield",
+    "name": "Echo Shield",
+    "descriptor": "AI Social Narrative Analysis & Counter-Intervention Platform",
+    "tags": ["NLP", "Multi-agent AI", "OSINT"],
+    "status": "Deployed & in use",
+    "accent": "cyan",
+    "featured": true,
+    "hasDetail": true,
+    "stack": ["Python", "FastAPI", "Local LLM", "React / TypeScript", "NLP models"],
+    "card": "A platform that reads public social-media discourse, detects emerging narratives with NLP, and drafts counter-narratives through a team of AI agents.",
+    "overview": [
+      "Echo Shield watches public conversation across major social platforms and makes sense of it at scale. A multi-stage NLP pipeline reads each post — detecting language, entities, sentiment, and stance — then groups related content into the narratives quietly forming underneath the noise.",
+      "Once a narrative surfaces, a small crew of AI agents studies it and drafts a considered counter-narrative response. The whole system runs its own machine-learning models locally rather than leaning on hosted APIs."
+    ],
+    "highlights": [
+      {
+        "title": "Real ML, end to end",
+        "body": "Language detection, entity recognition, sentiment, stance, embeddings, and clustering all run as local model inference — including support for Urdu and Roman Urdu, not just English."
+      },
+      {
+        "title": "Sees past text",
+        "body": "Media enrichment pulls text out of images and speech out of video before analysis, so a narrative carried in a screenshot or a clip isn't invisible to the pipeline."
+      },
+      {
+        "title": "Agents that respond, not just report",
+        "body": "A multi-agent system moves from analysis to action — studying a narrative and drafting a strategic counter-response rather than stopping at a dashboard."
+      }
+    ]
+  },
+  {
+    "slug": "current",
+    "name": "Current",
+    "descriptor": "Multi-Source Property Energy Billing & Automated Ledger System",
+    "tags": ["SaaS", "Full-stack", "Automation"],
+    "status": "Live in production",
+    "accent": "amber",
+    "featured": true,
+    "hasDetail": true,
+    "stack": ["Next.js", "NextAuth", "Prisma", "PostgreSQL", "Redis", "Tailwind"],
+    "card": "A production billing platform for a commercial property with 100+ tenants — meter readings in, bills and reconciled payments out, mostly on autopilot.",
+    "overview": [
+      "Current runs the money for a commercial property with more than a hundred tenants across two sites. Admins upload monthly meter readings; the system calculates tiered bills, generates PDFs, dispatches them by email and SMS, and tracks who has paid.",
+      "The part that saves the most time is reconciliation: a companion app forwards payment SMS messages, and the backend parses each one, matches it to the right tenant and bill, and applies confident matches automatically — leaving only the ambiguous ones for a human to confirm."
+    ],
+    "highlights": [
+      {
+        "title": "Payments that reconcile themselves",
+        "body": "Bank payment alerts are parsed and fuzzy-matched to tenants and bills automatically; high-confidence matches post on their own, the rest queue for quick review."
+      },
+      {
+        "title": "Self-service for tenants",
+        "body": "Tenants get passwordless links to view and pay bills and to upload proof of payment — no accounts to manage."
+      },
+      {
+        "title": "Careful with money",
+        "body": "Every amount is stored as an integer in the smallest currency unit, sidestepping the rounding errors that quietly break financial software."
+      }
+    ]
+  },
+  {
+    "slug": "psx-portfolio-tracker",
+    "name": "PSX Portfolio Tracker",
+    "descriptor": "Pakistan Stock Exchange Portfolio Tracker & Allocation Planner",
+    "tags": ["Full-stack", "Fintech", "Data"],
+    "status": "Live",
+    "accent": "cyan",
+    "featured": true,
+    "hasDetail": true,
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/blackstargit/psx-portfolio-tracker" }
+    ],
+    "stack": ["Next.js", "React", "Supabase", "TypeScript", "Recharts", "Tailwind"],
+    "card": "A personal investment tracker for the Pakistan Stock Exchange with live prices, multi-lot holdings, and a monthly allocation planner — no paid market data.",
+    "overview": [
+      "PSX Portfolio Tracker is an investment tracker built for the Pakistan Stock Exchange, where clean market data is hard to come by. It scrapes live prices straight from the exchange instead of paying for an API, tracks holdings lot by lot, and helps plan where each month's contribution should go."
+    ],
+    "highlights": [
+      {
+        "title": "Live prices, zero API cost",
+        "body": "A custom scraper pulls prices directly from the exchange, cached in two layers so the app stays fast without hammering the source."
+      },
+      {
+        "title": "Lot-level accuracy",
+        "body": "Holdings are tracked per lot, and a partial sale splits the lot automatically — so cost basis and gains stay correct."
+      },
+      {
+        "title": "Plans, not just tracks",
+        "body": "A monthly investment wizard turns a target allocation across sectors into concrete buys, alongside dividend and stop-loss tracking."
+      }
+    ]
+  },
+  {
+    "slug": "xai-diabetic-retinopathy",
+    "name": "Explainable DR Detection",
+    "descriptor": "Explainable AI for Diabetic Retinopathy Diagnosis",
+    "tags": ["Deep Learning", "Explainable AI", "Healthcare"],
+    "status": "Final-year project",
+    "accent": "violet",
+    "featured": true,
+    "hasDetail": false,
+    "links": [{ "label": "GitHub", "href": "https://github.com/blackstargit" }],
+    "stack": ["PyTorch", "Deep Learning", "XAI", "React"],
+    "card": "My final-year project: a deep-learning model that detects diabetic retinopathy from retinal scans and explains its reasoning in plain language."
+  }
+]

@@ -32,7 +32,7 @@ export function SiteNav() {
           aria-label="Home"
         >
           <span className="text-amber">/</span>
-          <span className="stream-text font-semibold">black_star</span>
+          <span className="stream-text font-semibold">{profile.brand}</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
